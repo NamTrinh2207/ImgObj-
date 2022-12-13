@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <img id="myImage" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" style="width: 20%" alt="">
+        <p>Click button below to move the image to left</p>
+        <input type="button" onclick="moveRight()" value="Click Me !">
+    </form>
+</body>
+</html>
+<script>
+    let shadow = null;
+    shadow = document.getElementById("myImage");
+
+    function unit(){
+        shadow = document.getElementById("myImage");
+        shadow.style.position="relative";
+        shadow.style.left= "600px";
+    }
+    function moveRight(){
+        shadow.style.left=parseInt(shadow.style.left)-20+"px";
+    }
+    window.onload=unit;
+</script>
